@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""asana2csv.py
-Modificated script by https://tech.surveypoint.com/posts/export-all-your-asana-tasks/
+"""
+Modified script by https://tech.surveypoint.com/posts/export-all-your-asana-tasks/
 
-Export all tasks from my Asana workspace to CSV
+Export all tasks from any Asana workspace to CSV
 Requires asana library.  See https://github.com/Asana/python-asana
 Requires workspace as parameter.
 """
@@ -19,6 +19,11 @@ import os
 
 MY_PERSONAL_ACCESS_TOKEN = 'YOUR_KEY'
 OUT_FILE_PATH = "YOUR_PATH_EXAMPLE C:/Users/User1/PycharmProjects/UnloadAsanaCSV/downloads"
+
+if not os.path.exists(OUT_FILE_PATH):
+    os.mkdir(OUT_FILE_PATH)
+
+
 OUT_FILE_NAME_ROOT = 'asana_tasks'
 CSV_OUT_HEADER = ['proj_name', 'ms_name', 'task_title', 'completed_on', 'priority']
 REC_LIMIT = 99999
