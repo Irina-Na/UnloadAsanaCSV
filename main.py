@@ -4,7 +4,7 @@ Modificated script by https://tech.surveypoint.com/posts/export-all-your-asana-t
 
 Export all tasks from my Asana workspace to CSV
 Requires asana library.  See https://github.com/Asana/python-asana
-Requires workspace as parameter.  Mine are Home, Computer, Business, Employer
+Requires workspace as parameter.
 """
 
 import sys
@@ -18,7 +18,7 @@ import os
 # Generate access token in Asana: My Profile Settings | Apps | Manage Developer Apps
 
 MY_PERSONAL_ACCESS_TOKEN = 'YOUR_KEY'
-OUT_FILE_PATH = "C:/Users/User1/PycharmProjects/UnloadAsanaCSV/downloads"
+OUT_FILE_PATH = "YOUR_PATH_EXAMPLE C:/Users/User1/PycharmProjects/UnloadAsanaCSV/downloads"
 OUT_FILE_NAME_ROOT = 'asana_tasks'
 CSV_OUT_HEADER = ['proj_name', 'ms_name', 'task_title', 'completed_on', 'priority']
 REC_LIMIT = 99999
